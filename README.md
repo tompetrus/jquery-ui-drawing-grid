@@ -1,0 +1,1 @@
+Drawing things by selecting squares

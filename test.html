@@ -1,0 +1,55 @@
+<html>
+<head>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="jquery.ui.drawingGrid.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("#grid-container").drawingGrid({cellSize: 50, minCellSize: 25, columns: 20, rows: 10});
+});
+</script>
+<style>
+html {
+  height: 100%;
+}
+
+body {
+    padding: 0;
+    height: 100%;
+}
+
+.draw-grid-container{
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
+.grid {
+    border: 1px solid #ccc;
+    border-width: 1px 0 0 1px;
+}
+
+.grid div {
+    border: 1px solid #ccc;
+    border-width: 0 1px 1px 0;
+    float: left;
+}
+
+.draw-grid-selection{
+  background-color: red;
+}
+
+.isShape{
+  background-color: yellow;
+}
+</style>
+</head>
+<body>
+<div>
+<div>
+<button id="DRAW">Draw</button><button id="ERASE">Erase</button><button id="DRAWSHAPES">Draw Shapes</button>
+</div>
+<div id="grid-container"></div>
+</div>
+</body>
+</html>
